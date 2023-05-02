@@ -6,11 +6,19 @@ function favoriteThings() {
 
 favoriteThings();
 
-
-function whyImHere(){
-console.log(`I want to create a new foundation for success.`);
+function whyImHere() {
+  console.log(`I want to create a new foundation for success.`);
 }
 
 whyImHere();
 
+function display(message) {
+  console.log(message);
+}
 
+display(`A given message`);
+display(`Why so Serious?`);
+display(`Why not?`);
+display(`Why now?`);
+display(`When then?`);
+display(`Why at all?`);
