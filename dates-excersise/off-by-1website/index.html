@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <input id="myDate" type="date" name="myDate" />
+      <button id="dateBtn" onclick="handleClick();">display date</button>
+      <p id="messagePara"></p>
+    </main>
+
+    <script>
+      function handleClick() {
+        const myDate = document.getElementById("myDate");
+        const message = document.getElementById("messagePara");
+      
+
+        let date = new Date(myDate.value);
+        message.innerText = `the date is ${date.toString()}`;
+      }
+    </script>
+  </body>
+</html>
