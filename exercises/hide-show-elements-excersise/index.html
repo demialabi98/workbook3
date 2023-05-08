@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide and Seek</title>
+  </head>
+  <body>
+    <input type="checkbox" id="toggleBox" onclick="hideAndSeek();" />
+    
+
+    <main>
+        <section id="info">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sint molestiae ratione sit iure quas
+        laboriosam, optio laborum totam aut? Sequi atque exercitationem, repellat repellendus ipsa molestiae rem omnis
+        maxime. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae laborum amet quod optio ut tempore
+        mollitia, ea, repellendus quasi cum numquam? Consequuntur natus debitis explicabo illum repudiandae nulla rem
+        dolores?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis labore aliquam laborum voluptas ex
+        recusandae placeat perferendis ipsam nostrum obcaecati fugiat tempora tempore dicta, quibusdam ipsum est
+        quisquam error perspiciatis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, laboriosam
+        quam? Magnam, suscipit, doloribus distinctio illo ab repellendus autem eius molestiae odio fugit dolor porro
+        esse. Perspiciatis cum illum sed.
+        
+      </p>
+    </main>
+    </section>
+
+    <script>
+      function hideAndSeek() {
+        const info = document.getElementById("info");
+        const toggleBox = document.getElementById("toggleBox");
+
+        if (toggleBox.checked) {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+
+      hid;
+    </script>
+  </body>
+</html>

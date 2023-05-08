@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+  </head>
+  <body>
+    <header>
+      <h1>ACME Car Rental</h1>
+    </header>
+
+    <main>
+
+        <div id="container">
+      <form action="">
+       <div><label for="date">Pickup date</label>
+        <input type="date" id="date" name="date" value=""/></div>
+        <br>
+        <div><label for="date">Number of days</label>
+        <input type="number" id="numOfDays" name="numOfDays" value=""/></div>
+
+
+        <p>Options</p>
+       <div><input type="checkbox" id="tollTag" name="tollTag" value="">
+       <label for="tollTag">Electronic Toll Tag($3.95/day)</label>
+      <br>
+       <input type="checkbox" id="gpsBox" name="gpsBox" value="">
+       <label for="gpsBox">GPS($2.95/day)</label>
+       <br>
+       <input type="checkbox" id="roadSide" name="roadSide" value="">
+       <label for="roadSide">Roadside Assistance($2.95/day)</label>
+
+       <p>Under 25</p>
+       <div>
+       <input type="radio" name="no" id="no" value="">
+       <label for="no">No</label>
+       <input type="radio" name="yes" id="yes" value="">
+       <label for="yes">Yes</label>
+       </div>
+       <br>
+       <button id="totalCost" onclick="totalPrice();">Estimate Total Cost</button>
+        </form>
+        <p>Car Rental: $<span id ="carRental"></span></p>
+        <p>Options: $<span id ="allOptions"></span></p>
+        <p>Under 25 Surcharge: $<span id ="under25"></span></p>
+        <p>Total Due: $<span id ="totalDue"></span></p>
+        </div>
+
+    </main>
+
+<script>
+function totalPrice(){
+const numOfDays = document.getElement.value("numOfDays");
+const tollTag = document.getElementById("tollTag");
+const gpsBox = document.getElementById("gpsBox");
+const roadSide = document.getElementById("roadSide");
+const noBox = document.querySelector('input[name="no"]:checked');
+const yesBox = document.querySelector('input[name="yes"]:checked');
+let basePrice = 30;
+
+let gpsPrice = 0;
+if(gpsBox.checked) {
+    gpsPrice = 2.95 * numOfDays;
+}
+
+let roadPrice = 0;
+if(roadSide.checked){
+    roadPrice = 2.95 * numOfDays;
+}
+
+let tollPrice = 0;
+if(tollTag.checked){
+    tollPrice = 3.95 * numOfDays;
+}
+
+
+let surCharge = 0;
+ if(noBox.checked){
+    surCharge = 0;
+ } else if (yesBox.checked){
+ surCharge = 0.3
+
+ }
+ const totalEstimate = carRental + gpsPrice + roadPrice + tollPrice
+
+ const carRental = numOfDays * basePrice;
+ 
+ const carRentalElement = document.getElementById("carRental");
+ 
+ carRentalElement.innerText = "Car Rental: $" + allOptionsElement.toFixed(2);
+
+ const allOptions = gpsPrice + roadPrice + tollPrice;
+
+ const allOptionsElement = document.getElementById("allOptions");
+
+ allOptionsElement.innerText = "Options: $" + allOptions.toFixed(2);
+ 
+ const under25 = surCharge * totalEstimate;
+
+ const under25Element = document.getElementById("under25");
+
+ under25Element.innerText = "Under 25 Surcharge: $" + under25.toFixed(2);
+ 
+ const totalDue = totalEstimate + under25;
+ 
+ const totalDueElement = document.getElementById("totalDue");
+ 
+ totalDueElement.innerText = "Total Due: $" + totalDue.toFixed(2);
+}
+
+</script>
+  </body>
+</html>
